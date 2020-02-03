@@ -38,13 +38,13 @@ train_data_aug = tf.keras.preprocessing.image.ImageDataGenerator(
 test_data_aug = tf.keras.preprocessing.image.ImageDataGenerator(rescale=1./255)
 
 training_set = train_data_aug.flow_from_directory(
-    'C:\\Users\\kevkr\\PycharmProjects\\catdog-cnn\\catdog-cnn\\cat_dog\\training_set',
+    '..\\catdog-cnn\\cat_dog\\training_set',
     target_size=(64, 64),
     batch_size=32,
     class_mode='binary')
 
 test_set = test_data_aug.flow_from_directory(
-    'C:\\Users\\kevkr\\PycharmProjects\\catdog-cnn\\catdog-cnn\\cat_dog\\test_set',
+    '..\\catdog-cnn\\cat_dog\\test_set',
     target_size=(64, 64),
     batch_size=32,
     class_mode='binary')
